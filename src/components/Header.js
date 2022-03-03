@@ -11,31 +11,15 @@ const HeaderContainer = styled.div`
   background-color: black;
 `;
 
-const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
-const Button = styled.button`
-  width: 60px;
-  height: 40px;
-  background-color: red;
-  color: white;
-`;
-
 const Logo = styled.img`
   width: 100%;
   height: 200px;
 `;
 
-const Header = ({ onSortContent, page }) => {
+const Header = () => {
   return (
     <HeaderContainer>
       <Logo src="/assets/Netflix_logo.png" alt="netflix logo" />
-      <ButtonContainer>
-        <Button onClick={() => onSortContent("tv show", page)}>TV Shows</Button>
-        <Button onClick={() => onSortContent("movie", page)}>Movies</Button>
-      </ButtonContainer>
     </HeaderContainer>
   );
 };
